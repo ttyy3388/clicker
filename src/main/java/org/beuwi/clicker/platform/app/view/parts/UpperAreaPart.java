@@ -5,6 +5,7 @@ import javafx.collections.ObservableMap;
 import javafx.scene.layout.StackPane;
 import org.beuwi.clicker.openapi.FormLoader;
 import org.beuwi.clicker.platform.app.impl.View;
+import org.beuwi.clicker.platform.app.view.actions.StartMacroClickAction;
 import org.beuwi.clicker.platform.gui.control.HBox;
 import org.beuwi.clicker.platform.gui.control.Label;
 import org.beuwi.clicker.platform.gui.control.ToggleButton;
@@ -43,6 +44,14 @@ public class UpperAreaPart implements View, Runnable
 
 		label = (Label) component.getItem(0);
 		button = (ToggleButton) component.getItem(1);
+
+		button.setOnAction(event ->
+		{
+			if (button.isSelected())
+			{
+				StartMacroClickAction.execute(true);
+			}
+		});
 
 		button.getSelectedProperty().addListener(change ->
 		{

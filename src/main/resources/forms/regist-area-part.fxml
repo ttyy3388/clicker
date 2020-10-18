@@ -12,9 +12,9 @@
 		<MacroView HBox.hgrow="ALWAYS" />
 		<VBox spacing="10.0">
 			<Button fx:id="btnCreate" text="추가" />
-			<Button fx:id="btnDelete" text="삭제" />
 			<Button fx:id="btnModify" text="편집" />
-			<Button fx:id="btnSetting" text="설정" />
+			<Button fx:id="btnDelete" text="삭제" />
+			<Button fx:id="btnSetting" text="설정" disable="true" />
 		</VBox>
 	</items>
 	<padding>

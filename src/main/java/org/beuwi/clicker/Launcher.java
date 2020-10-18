@@ -1,13 +1,14 @@
 package org.beuwi.clicker;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import org.beuwi.clicker.platform.app.action.CreateMacroAction;
 import org.beuwi.clicker.platform.app.action.DeleteMacroAction;
 import org.beuwi.clicker.platform.app.view.MainView.MainWindow;
-import org.beuwi.clicker.platform.app.view.actions.StartMacroClickAction;
 import org.beuwi.clicker.platform.app.view.actions.RunMacroTimerAction;
+import org.beuwi.clicker.platform.app.view.actions.StartMacroClickAction;
 import org.beuwi.clicker.platform.app.view.parts.RegistAreaPart;
 import org.beuwi.clicker.platform.app.view.parts.UpperAreaPart;
 import org.beuwi.clicker.platform.util.ResourceUtils;
@@ -56,7 +57,8 @@ public class Launcher extends Application
     @Override
     public void stop()
     {
-
+        Platform.exit();
+        System.exit(0);
     }
 
     public static void main(String[] args)

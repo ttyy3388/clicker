@@ -12,7 +12,7 @@ java {
 }
 
 group 'org.beuwi.clicker'
-version '1.0.0'
+version '1.0.1'
 
 javafx {
     version = '14'
@@ -20,7 +20,7 @@ javafx {
 }
 
 application {
-    mainClassName = "org.beuwi.clicker.Launcher"
+    mainClassName = "$moduleName/org.beuwi.clicker.Launcher"
 }
 
 repositories {
@@ -41,7 +41,7 @@ jlink {
     options = ['--strip-debug', '--compress', '2', '--no-header-files', '--no-man-pages']
 
     launcher {
-        name = 'Auto Clicker'
+        name = 'Clicker'
     }
 
     jpackage {
