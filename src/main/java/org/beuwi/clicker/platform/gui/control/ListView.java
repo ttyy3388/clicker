@@ -40,13 +40,12 @@ public class ListView<T> extends javafx.scene.control.ListView<T>
 
 	public void select(T item)
 	{
-		getSelectionModel().select(item);
+		getSelectionModel().select(item); scroll(item);
 	}
 
 	public void addItem(T item)
 	{
-		getItems().add(item);
-		scroll(item);
+		getItems().add(item); select(item);
 	}
 
 	public T getItem(int index)

@@ -9,7 +9,6 @@ import org.beuwi.clicker.platform.app.view.dialogs.CreateMacroDialog;
 import org.beuwi.clicker.platform.app.view.dialogs.ModifyMacroDialog;
 import org.beuwi.clicker.platform.gui.control.Button;
 import org.beuwi.clicker.platform.gui.control.HBox;
-import org.beuwi.clicker.platform.gui.control.Macro;
 import org.beuwi.clicker.platform.gui.control.MacroView;
 
 public class RegistAreaPart implements View
@@ -42,12 +41,7 @@ public class RegistAreaPart implements View
 
 		((Button) nameSpace.get("btnModify")).setOnAction(event ->
 		{
-			Macro item = RegistAreaPart.getComponent().getSelectedItem();
-
-			if (item != null)
-			{
-				OpenDialogBoxAction.execute(new ModifyMacroDialog(item));
-			}
+			OpenDialogBoxAction.execute(new ModifyMacroDialog());
 		});
 
 		((Button) nameSpace.get("btnSetting")).setOnAction(event ->

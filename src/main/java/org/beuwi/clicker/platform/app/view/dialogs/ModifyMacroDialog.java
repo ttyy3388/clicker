@@ -10,6 +10,7 @@ import org.beuwi.clicker.openapi.MouseListener;
 import org.beuwi.clicker.openapi.MouseManager;
 import org.beuwi.clicker.openapi.MouseObserver;
 import org.beuwi.clicker.platform.app.action.ModifyMacroAction;
+import org.beuwi.clicker.platform.app.view.parts.RegistAreaPart;
 import org.beuwi.clicker.platform.gui.control.Button;
 import org.beuwi.clicker.platform.gui.control.Macro;
 import org.beuwi.clicker.platform.gui.control.TextField;
@@ -34,6 +35,11 @@ public class ModifyMacroDialog extends DialogBoxWrap
 
 	private final Macro target;
 
+	public ModifyMacroDialog()
+	{
+		this(RegistAreaPart.getComponent().getSelectedItem());
+	}
+
 	// Macro : Modify Target
 	public ModifyMacroDialog(Macro target)
 	{
@@ -57,7 +63,6 @@ public class ModifyMacroDialog extends DialogBoxWrap
 		button = getOkButton();
 
 		button.setText("수정");
-		button.setDisable(true);
 		button.setOnAction(event ->
 		{
 			this.action();
@@ -74,8 +79,8 @@ public class ModifyMacroDialog extends DialogBoxWrap
             @Override
 			public void moved(MouseEvent e)
             {
-                txfCurrentX.setText(String.valueOf(e.getX()));
-				txfCurrentY.setText(String.valueOf(e.getY()));
+                txfCurrentX.setText(e.getX());
+				txfCurrentY.setText(e.getY());
 			}
 		});
 
@@ -100,8 +105,8 @@ public class ModifyMacroDialog extends DialogBoxWrap
 			}
 			if (event.getCode().equals(KeyCode.F12))
 			{
-				txfCapturedX.setText(String.valueOf(MouseManager.getX()));
-				txfCapturedY.setText(String.valueOf(MouseManager.getY()));
+				txfCapturedX.setText(MouseManager.getX());
+				txfCapturedY.setText(MouseManager.getY());
 			}
 		});
 

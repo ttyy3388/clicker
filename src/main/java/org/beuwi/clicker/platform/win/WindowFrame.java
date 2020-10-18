@@ -5,7 +5,12 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Region;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import org.beuwi.clicker.platform.app.action.DeleteMacroAction;
 import org.beuwi.clicker.platform.app.view.MainView;
+import org.beuwi.clicker.platform.app.view.actions.OpenDialogBoxAction;
+import org.beuwi.clicker.platform.app.view.actions.StartMacroClickAction;
+import org.beuwi.clicker.platform.app.view.dialogs.CreateMacroDialog;
+import org.beuwi.clicker.platform.app.view.dialogs.ModifyMacroDialog;
 import org.beuwi.clicker.platform.gui.control.StackPane;
 import org.beuwi.clicker.platform.util.ResourceUtils;
 
@@ -76,9 +81,19 @@ public class WindowFrame extends StackPane
 		{
 			stage.addEventFilter(KeyEvent.KEY_PRESSED, event ->
 			{
-				if (event.getCode().equals(KeyCode.F10))
+				switch (event.getCode())
 				{
-					
+					case DELETE : DeleteMacroAction.execute(); break;
+					case F10 : StartMacroClickAction.execute(); break;
+					case F2 : OpenDialogBoxAction.execute(new ModifyMacroDialog());
+				}
+
+				if (event.isControlDown())
+				{
+					if (event.getCode().equals(KeyCode.N))
+					{
+						OpenDialogBoxAction.execute(new CreateMacroDialog());
+					}
 				}
 			});
 		}

@@ -19,5 +19,7 @@ public class ScrollBarSkin extends javafx.scene.control.skin.ScrollBarSkin
 		{
 			control.setValue(control.getValue() - (event.getDeltaY() * DEFAULT_SCROLL_SPEED));
 		});
+
+		control.setPrefWidth(10.0);
 	}
 }

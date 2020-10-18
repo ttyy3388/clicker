@@ -2,12 +2,12 @@ package org.beuwi.clicker.platform.app.view.parts;
 
 import javafx.application.Platform;
 import javafx.collections.ObservableMap;
-import javafx.scene.control.ToggleButton;
 import javafx.scene.layout.StackPane;
 import org.beuwi.clicker.openapi.FormLoader;
 import org.beuwi.clicker.platform.app.impl.View;
 import org.beuwi.clicker.platform.gui.control.HBox;
 import org.beuwi.clicker.platform.gui.control.Label;
+import org.beuwi.clicker.platform.gui.control.ToggleButton;
 
 import java.text.DecimalFormat;
 
@@ -41,17 +41,12 @@ public class UpperAreaPart implements View, Runnable
 		root = loader.getRoot();
 		component = loader.getComponent();
 
-		Thread thread = new Thread(this);
-
 		label = (Label) component.getItem(0);
 		button = (ToggleButton) component.getItem(1);
 
-		label.setText("00 : 00 : 00");
-		button.setText("Start");
-
-		button.setOnAction(event ->
+		button.getSelectedProperty().addListener(change ->
 		{
-			button.setText(!button.isSelected() ? "Start" : "Stop");
+			button.setText(!button.isSelected() ? "시작" : "중지");
 
 			// Start
 			if (button.isSelected())
@@ -59,11 +54,12 @@ public class UpperAreaPart implements View, Runnable
 				start = System.currentTimeMillis();
 				power = true;
 
-				thread.start();
+				new Thread(this).start();
 			}
 			else
 			{
 				power = false;
+
 				label.setText("00 : 00 : 00");
 			}
 		});
@@ -72,8 +68,13 @@ public class UpperAreaPart implements View, Runnable
 	@Override
 	public void run()
 	{
-		while (power)
+		for (;;)
 		{
+			if (!power)
+			{
+				break;
+			}
+
 			long time = System.currentTimeMillis() - start;
 
 			try

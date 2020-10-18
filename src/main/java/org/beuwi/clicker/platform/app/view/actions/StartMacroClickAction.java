@@ -11,19 +11,19 @@ import java.awt.event.InputEvent;
 
 public class StartMacroClickAction implements Action
 {
-	private static MacroView control;
+	private static MacroView component;
 
 	@Override
 	public void init()
 	{
-		control = RegistAreaPart.getComponent();
+		component = RegistAreaPart.getComponent();
 	}
 
 	public static void execute()
 	{
 		try
 		{
-            for (Macro item : control.getItems())
+            for (Macro item : component.getItems())
 			{
 				Point point = item.getValue();
 
@@ -41,11 +41,13 @@ public class StartMacroClickAction implements Action
 		{
 			e.printStackTrace();
 		}
+
+		RunMacroTimerAction.execute();
 	}
 
 	@Override
 	public String getName()
 	{
-		return "set.mouse.point.action";
+		return "start.macro.click.action";
 	}
 }

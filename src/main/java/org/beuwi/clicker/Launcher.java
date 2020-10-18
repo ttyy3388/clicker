@@ -6,6 +6,8 @@ import javafx.stage.Stage;
 import org.beuwi.clicker.platform.app.action.CreateMacroAction;
 import org.beuwi.clicker.platform.app.action.DeleteMacroAction;
 import org.beuwi.clicker.platform.app.view.MainView.MainWindow;
+import org.beuwi.clicker.platform.app.view.actions.StartMacroClickAction;
+import org.beuwi.clicker.platform.app.view.actions.RunMacroTimerAction;
 import org.beuwi.clicker.platform.app.view.parts.RegistAreaPart;
 import org.beuwi.clicker.platform.app.view.parts.UpperAreaPart;
 import org.beuwi.clicker.platform.util.ResourceUtils;
@@ -37,10 +39,13 @@ public class Launcher extends Application
             new UpperAreaPart().init();
             new RegistAreaPart().init();
 
-            new MainWindow(stage).create();
-
             new CreateMacroAction().init();
             new DeleteMacroAction().init();
+
+            new StartMacroClickAction().init();
+            new RunMacroTimerAction().init();
+
+            new MainWindow(stage).create();
         }
         catch (Throwable e)
         {

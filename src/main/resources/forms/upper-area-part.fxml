@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.layout.StackPane?>
 <?import org.beuwi.clicker.platform.gui.control.HBox?>
 <?import org.beuwi.clicker.platform.gui.control.Label?>
+<?import org.beuwi.clicker.platform.gui.control.ToggleButton?>
 
 <StackPane styleClass="upper-area" stylesheets="@../styles/upper-area-part.css" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
     <children>
         <HBox>
             <children>
-                <Label styleClass="time-text" HBox.hgrow="ALWAYS" />
-                <ToggleButton prefWidth="100" />
+                <Label styleClass="time-text" text="00 : 00 : 00" HBox.hgrow="ALWAYS" />
+                <ToggleButton text="시작" prefWidth="100" />
             </children>
         </HBox>
     </children>

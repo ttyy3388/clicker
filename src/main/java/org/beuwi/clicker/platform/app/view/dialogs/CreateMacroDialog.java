@@ -69,8 +69,8 @@ public class CreateMacroDialog extends DialogBoxWrap
             @Override
 			public void moved(MouseEvent e)
             {
-                txfCurrentX.setText(String.valueOf(e.getX()));
-				txfCurrentY.setText(String.valueOf(e.getY()));
+                txfCurrentX.setText(e.getX());
+				txfCurrentY.setText(e.getY());
 			}
 		});
 
@@ -91,8 +91,8 @@ public class CreateMacroDialog extends DialogBoxWrap
 			}
 			if (event.getCode().equals(KeyCode.F12))
 			{
-				txfCapturedX.setText(String.valueOf(MouseManager.getX()));
-				txfCapturedY.setText(String.valueOf(MouseManager.getY()));
+				txfCapturedX.setText(MouseManager.getX());
+				txfCapturedY.setText(MouseManager.getY());
 			}
 		});
 
