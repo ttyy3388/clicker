@@ -1,0 +1,98 @@
+
+/* ---------- Dark Theme ---------- */
+
+*
+{
+	-fx-text-fill: #FFFFFF;
+}
+
+.root
+{
+	-fx-background-color: #000000;
+}
+
+/* .dialog { } */
+
+.button
+{
+    -fx-border-color: #FFFFFF;
+}
+
+.check-box
+{
+	-fx-label-padding: 0 0 0 8;
+}
+.check-box .box
+{
+	-fx-background-color: #333333;
+	-fx-border-color: transparent;
+	-fx-border-width: 1;
+	-fx-padding: 2;
+}
+.check-box .mark
+{
+	-fx-padding: 6;
+}
+/* .check-box:hover .box, */
+.check-box:focused .box
+{
+	/* -fx-background-color: #3F3F3F; */
+	-fx-border-color: #007ACC;
+}
+/* .check-box:armed .mark
+{
+	-fx-background-color: #007ACC;
+} */
+.check-box:selected .mark
+{
+	-fx-background-color: #FFFFFF;
+}
+
+.context-menu
+{
+	-fx-background-color: #FFFFFF;
+	-fx-border-color: #BABABA;
+	-fx-border-width: 1;
+	-fx-padding: 5 0 5 0;
+	-fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 10, 0, 0, 5);
+}
+.context-menu .separator .line
+{
+	-fx-background-insets: 5 0 5 0;
+	-fx-background-color: #BABABA;
+	-fx-padding: 5.5 0 5.5 0;
+}
+
+.menu
+{
+	-fx-padding: 5 20 5 20;
+}
+/* .menu .label
+{
+	-fx-text-fill: #000000;
+} */
+* .menu .label
+{
+	-fx-font-family: 'Microsoft Sans Serif';
+	-fx-text-fill: #000000;
+	-fx-font-size: 12;
+}
+.menu:focused
+{
+	-fx-background-color: #E8EAED;
+}
+
+.separator .line
+{
+	-fx-background-color: #888888;
+	-fx-padding: 0.5 0 0.5 0;
+}
+
+.text-field
+{
+	-fx-font-family: D2Coding;
+	-fx-font-size: 14;
+
+	-fx-background-color: #FFFFFF;
+	-fx-text-fill: #000000;
+}

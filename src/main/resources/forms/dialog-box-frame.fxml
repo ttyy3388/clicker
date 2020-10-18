@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.geometry.Insets?>
+
+<?import org.beuwi.clicker.platform.gui.control.Button?>
+<?import org.beuwi.clicker.platform.gui.control.HBox?>
+
+<BorderPane fx:id="brpRootPane" stylesheets="@../styles/dialog-box-frame.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+	<bottom>
+		<HBox fx:id="hbxButtonBar" alignment="CENTER_RIGHT" prefHeight="25.0" spacing="10.0">
+			<children>
+				<Button fx:id="btnOk" text="OK" />
+				<Button fx:id="btnNo" text="NO" />
+			</children>
+			<BorderPane.margin>
+				<Insets top="10" />
+			</BorderPane.margin>
+		</HBox>
+	</bottom>
+	<StackPane.margin>
+		<Insets top="10" right="10" left="10" bottom="10" />
+	</StackPane.margin>
+</BorderPane>

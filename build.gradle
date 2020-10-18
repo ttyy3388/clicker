@@ -1,0 +1,67 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.9'
+    id 'org.beryx.jlink' version '2.22.0'
+}
+
+java {
+    // jdk 14
+    sourceCompatibility = JavaVersion.VERSION_14;
+    targetCompatibility = JavaVersion.VERSION_14;
+}
+
+group 'org.beuwi.clicker'
+version '1.0.0'
+
+javafx {
+    version = '14'
+    modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.web' ]
+}
+
+application {
+    mainClassName = "org.beuwi.clicker.Launcher"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+}
+
+compileJava {
+    options.encoding('UTF-8')
+}
+
+run {
+}
+
+jlink {
+    options = ['--strip-debug', '--compress', '2', '--no-header-files', '--no-man-pages']
+
+    launcher {
+        name = 'Auto Clicker'
+    }
+
+    jpackage {
+        imageOptions += ['--icon', 'src/main/resources/icons/program.ico']
+
+        /* installerOptions = [
+                '--vendor', 'beuwi',
+                '--app-version', '0.5.0',
+        ] */
+    }
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'org.beuwi.clicker.Launcher'
+    }
+
+    /* from {
+        configurations.compile.collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    } */
+}

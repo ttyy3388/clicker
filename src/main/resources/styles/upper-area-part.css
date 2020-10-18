@@ -1,0 +1,20 @@
+
+.upper-area
+{
+    -fx-border-color: #FFFFFF;
+}
+
+.time-text
+{
+	-fx-font-size: 45;
+}
+
+.toggle-button
+{
+	-fx-border-color: #FFFFFF;
+	-fx-font-size: 20;
+}
+.toggle-button:selected
+{
+    -fx-background-color: #FF0000;
+}

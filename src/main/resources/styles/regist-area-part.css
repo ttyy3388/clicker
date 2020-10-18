@@ -1,0 +1,19 @@
+
+.regist-area
+{
+    -fx-border-color: #FFFFFF;
+}
+
+.macro
+{
+    -fx-font-size: 15;
+}
+
+.list-cell
+{
+    -fx-border-color: transparent;
+}
+.list-cell:selected
+{
+    -fx-border-color: #FFFFFF;
+}

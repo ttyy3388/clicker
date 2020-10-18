@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import org.beuwi.clicker.platform.gui.control.HBox?>
+<?import org.beuwi.clicker.platform.gui.control.Label?>
+<?import org.beuwi.clicker.platform.gui.control.TextField?>
+<?import org.beuwi.clicker.platform.gui.control.VBox?>
+
+<VBox alignment="CENTER" spacing="15.0" prefWidth="450.0" prefHeight="120.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+	<items>
+		<HBox spacing="10.0" >
+			<Label text="매크로 이름 : " prefWidth="100" />
+			<TextField fx:id="txfMacroName" HBox.hgrow="ALWAYS" />
+		</HBox>
+		<HBox spacing="10.0" >
+			<Label text="현재 커서 : " prefWidth="100" />
+			<TextField fx:id="txfCurrentX" disable="true" HBox.hgrow="ALWAYS" />
+			<TextField fx:id="txfCurrentY" disable="true" HBox.hgrow="ALWAYS" />
+		</HBox>
+		<HBox spacing="10.0" >
+			<Label text="캡처 커서 : " prefWidth="100" />
+			<TextField fx:id="txfCapturedX" HBox.hgrow="ALWAYS" />
+			<TextField fx:id="txfCapturedY" HBox.hgrow="ALWAYS" />
+		</HBox>
+	</items>
+</VBox>
