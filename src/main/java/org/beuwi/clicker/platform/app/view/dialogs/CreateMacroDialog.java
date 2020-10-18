@@ -89,6 +89,7 @@ public class CreateMacroDialog extends DialogBoxWrap
 					this.action();
 				}
 			}
+
 			if (event.getCode().equals(KeyCode.F12))
 			{
 				txfCapturedX.setText(MouseManager.getX());

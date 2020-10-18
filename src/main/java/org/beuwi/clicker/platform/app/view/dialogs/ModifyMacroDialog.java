@@ -101,8 +101,10 @@ public class ModifyMacroDialog extends DialogBoxWrap
 				if (!button.isDisable())
 				{
 					this.action();
+					this.close();
 				}
 			}
+
 			if (event.getCode().equals(KeyCode.F12))
 			{
 				txfCapturedX.setText(MouseManager.getX());
