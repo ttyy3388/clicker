@@ -63,6 +63,31 @@
 	-fx-padding: 5.5 0 5.5 0;
 }
 
+.combo-box
+{
+    -fx-border-color: #FFFFFF;
+    -fx-font-size: 14;
+}
+.combo-box .arrow
+{
+    -fx-background-color: #FFFFFF;
+	-fx-padding: 6;
+    -fx-shape: "M 0 0 h 7 l -3.5 4 z";
+}
+.combo-box .arrow-button
+{
+    -fx-border-color: #FFFFFF;
+}
+
+.combo-box-popup .list-view
+{
+    -fx-border-color: #FFFFFF;
+}
+.combo-box-popup .list-cell
+{
+    -fx-padding: 5;
+}
+
 .menu
 {
 	-fx-padding: 5 20 5 20;

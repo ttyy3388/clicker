@@ -19,6 +19,6 @@ public class ModifyMacroAction implements Action
 	@Override
 	public String getName()
 	{
-		return "add.macro.action";
+		return "modify.macro.action";
 	}
 }

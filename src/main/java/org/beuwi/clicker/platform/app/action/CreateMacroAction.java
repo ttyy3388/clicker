@@ -23,6 +23,6 @@ public class CreateMacroAction implements Action
 	@Override
 	public String getName()
 	{
-		return "add.macro.action";
+		return "create.macro.action";
 	}
 }

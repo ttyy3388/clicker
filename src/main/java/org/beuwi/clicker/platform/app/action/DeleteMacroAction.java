@@ -28,6 +28,6 @@ public class DeleteMacroAction implements Action
 	@Override
 	public String getName()
 	{
-		return "add.macro.action";
+		return "delete.macro.action";
 	}
 }

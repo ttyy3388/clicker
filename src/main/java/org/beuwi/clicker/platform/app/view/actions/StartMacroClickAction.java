@@ -32,14 +32,13 @@ public class StartMacroClickAction implements Action
 			{
 				Point point = item.getValue();
 
-				if (point != null)
-				{
-					Robot robot = new Robot();
+				Robot robot = new Robot();
 
-					robot.mouseMove((int) point.getX(), (int) point.getY());
-					robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
-					robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
-				}
+				robot.mouseMove((int) point.getX(), (int) point.getY());
+				robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+				robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+
+				Thread.sleep(10);
 			}
 		}
 		catch (Exception e)

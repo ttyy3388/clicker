@@ -33,6 +33,11 @@
 	-fx-padding: 4;
 }
 
+.combo-box
+{
+	-fx-padding: 4;
+}
+
 /* IMAGE */
 .button, .toggle-button
 {
